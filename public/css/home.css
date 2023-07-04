@@ -55,6 +55,11 @@
     position: relative;
     margin-bottom: 30px;
 }
+
+.home-main-section-product-img {
+    width: 100%;
+}
+
 .home-main-section-product-sticker{
     position: absolute;
     top: 0px;
@@ -79,7 +84,7 @@
 
 .home-main-section-product-button {
     display: inline-block;
-    padding: 10px 10px;
+    padding: 10px;
     margin: 20px 0;
     background-color: var(--colorgris);
 
@@ -101,4 +106,94 @@
 
 .home-footer-nav--menu ul li:last-child {
     margin-bottom: 0;
+}
+
+@media (min-width:768px){
+    .home-header-a-bars {
+        display: none;
+        
+    }
+
+    .home-header-nav--menu ul li {
+        width: 15%;
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+        padding: 8px;
+        float: left;
+        margin-right: 2%;
+    }
+
+    .home-header-nav--menu ul li:last-child {
+        margin-right: 0;
+    }
+
+    /*MAIN*/
+
+    .home-main-section-banner {
+        display: block;
+    }
+
+    .home-main-section-banner img {
+        width: 100%;
+    }
+
+    .home-main-section-products {
+        overflow: hidden;
+    }
+
+    .home-main-section-product {
+        width: 40%;
+        float: left;
+        margin-right: 2%;
+    }
+
+    .home-main-section-product:nth-child(even){
+        margin-right: 0;
+    }
+}
+
+@media (min-width:1024px){
+    /*HEADER*/
+    .home-header-nav--menu ul li {
+        height: 50px;
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    /*MAIN*/
+
+    .home-main-section-product {
+        width: 32%;
+    }
+
+    .home-main-section-product:nth-child(even){
+        margin-right: 2%;
+    }
+
+    .home-main-section-product:nth-child(3n){
+        margin-right: 0;
+    }
+
+    /*FOOTER*/
+
+    .home-footer{
+        background-color: var(--colorrojo);
+        text-align: center;
+        padding: 60px 0;
+        border-radius: 30px 30px 0 0;
+    }
+
+    .home-footer-nav--menu ul li {
+        display: inline;
+        margin-bottom: 0;
+        text-transform: capitalize;
+        padding: 0 10px;
+        border-right: solid 1px white;
+        
+    }
+
+    .home-footer-nav--menu ul li:last-child{
+        border-right: none;
+    }
+
 }
