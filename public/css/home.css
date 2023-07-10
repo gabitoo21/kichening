@@ -28,18 +28,19 @@
     border-radius: 5px;
 }
 
+.home-header-nav--menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
 .home-header-nav--menu ul li {
     background-color: var(--colorgris);
     width: 100%;
-    margin-bottom: 2px;
     font-size: 1.2rem;
     text-transform: uppercase;
     padding: 8px;
 }
-.home-header-nav--menu ul li:last-child {
-    margin-bottom: 0;
-}
-
 
 /* MAIN */
 
@@ -49,6 +50,12 @@
 
 .home-main-section-products {
     margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home-main-section-product{
+    width: 300px;
 }
 
 .home-main-section-product-box {
@@ -108,23 +115,23 @@
     margin-bottom: 0;
 }
 
-@media (min-width:768px){
+@media (min-width:481px){
     .home-header-a-bars {
         display: none;
         
     }
 
+    .home-header-nav--menu ul {
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 6px;
+
+    }
+
     .home-header-nav--menu ul li {
-        width: 15%;
         margin-bottom: 20px;
         font-size: 0.9rem;
         padding: 8px;
-        float: left;
-        margin-right: 2%;
-    }
-
-    .home-header-nav--menu ul li:last-child {
-        margin-right: 0;
     }
 
     /*MAIN*/
@@ -138,22 +145,21 @@
     }
 
     .home-main-section-products {
-        overflow: hidden;
+        justify-content: space-between;
     }
 
     .home-main-section-product {
-        width: 40%;
-        float: left;
-        margin-right: 2%;
-    }
-
-    .home-main-section-product:nth-child(even){
-        margin-right: 0;
+        width: 49%;
+        
     }
 }
 
 @media (min-width:1024px){
     /*HEADER*/
+    .home-header-nav--menu ul {
+        gap: 20px;
+    }
+
     .home-header-nav--menu ul li {
         height: 50px;
         font-size: 1rem;
@@ -164,14 +170,6 @@
 
     .home-main-section-product {
         width: 32%;
-    }
-
-    .home-main-section-product:nth-child(even){
-        margin-right: 2%;
-    }
-
-    .home-main-section-product:nth-child(3n){
-        margin-right: 0;
     }
 
     /*FOOTER*/
